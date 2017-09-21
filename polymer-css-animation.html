@@ -1,0 +1,63 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../paper-material/paper-material.html">
+<link rel="import" href="animation-styles.html">
+
+<dom-module id="polymer-css-animation">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      paper-material {
+        width:300px;
+        height:300px;
+        display: block;
+        opacity: 0;
+        animation-name: growwimfade;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+      }
+
+      .success{
+        animation-name: wim;
+        background-color: #44aa44;
+      }
+
+      .failure{
+        animation-name: fade-in;
+        background-color: #aa4444;
+      }
+
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+
+    <paper-material elevation="1" class="success">Test will animate</paper-material>
+    <paper-material elevation="1" class="failure">Test won't animate</paper-material>
+  </template>
+
+  <script>
+    /**
+     * `polymer-css-animation`
+     * Trying to create an element that fades with keyframes
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PolymerCssAnimation extends Polymer.Element {
+      static get is() { return 'polymer-css-animation'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'polymer-css-animation'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PolymerCssAnimation.is, PolymerCssAnimation);
+  </script>
+</dom-module>

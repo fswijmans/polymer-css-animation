@@ -1,0 +1,53 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="animation-styles">
+    <template>
+        <custom-style>
+            <style is="custom-style">
+                @-webkit-keyframes growwimfade {
+                    0% {
+                        display: block;
+                        opacity: 0;
+                        transform: scale(0.95);
+                    }
+                    100% {
+                        display: block;
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+                @-webkit-keyframes wim {
+                    0% {
+                        display: block;
+                        opacity: 0;
+                        transform: scale(0.95);
+                    }
+                    100% {
+                        display: block;
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+
+                @-webkit-keyframes fade-in {
+                    0% {
+                        display: block;
+                        opacity: 0;
+                    }
+                    100% {
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+
+                @-webkit-keyframes fade-in-item {
+                    0%   { display: block; opacity: 0; transform: scale(0.95);  }
+                    40%   { display: block; transform: scale(0.99);  }
+                    100% { display: block; opacity: 1; transform: scale(1); }
+                }
+
+
+            </style>
+        </custom-style>
+    </template>
+</dom-module>
